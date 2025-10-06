@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Water Level IoT",
-    "slug": "waterleveliot",
+    "name": "IoT Apps",
+    "slug": "ssmsiotapps",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "waterleveliot",
+    "scheme": "ssmsiotapps",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -18,7 +18,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "id.co.ssms.waterleveliot"
+      "package": "id.co.ssms.ssmsiotapps"
     },
     "web": {
       "output": "static",
@@ -46,7 +46,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "f348b772-0777-484d-b724-c08c7a61e68e"
+        "projectId": "977531a6-09ca-46ab-9760-a0cb0e264f77"
       }
     },
     "owner": "iot-ssms",
@@ -54,7 +54,7 @@
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/f348b772-0777-484d-b724-c08c7a61e68e"
+      "url": "https://u.expo.dev/977531a6-09ca-46ab-9760-a0cb0e264f77"
     }
   }
 }
