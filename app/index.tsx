@@ -9,6 +9,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import { WebView } from 'react-native-webview';
@@ -33,6 +34,14 @@ const Index = () => {
     const backHandler = BackHandler.addEventListener('hardwareBackPress', onBackPress);
     return () => backHandler.remove();
   }, []);
+
+  const handleReload = () => {
+    if (webViewRef.current) {
+      setLoadingProgress(0);
+      setIsLoading(true);
+      webViewRef.current.reload();
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -64,8 +73,12 @@ const Index = () => {
         originWhitelist={['*']}
         mixedContentMode="compatibility"
         userAgent={getUserAgent()}
-        onError={(error) => console.log('❌ WebView error:', error)}
-        onHttpError={(error) => console.log('❌ HTTP error:', error)}
+        onError={(error) => {
+          console.log('❌ WebView error:', error);
+        }}
+        onHttpError={(error) => {
+          console.log('❌ HTTP error:', error);
+        }}
         onLoadStart={() => {
           console.log('🔄 WebView loading started');
           setIsLoading(true);
@@ -84,6 +97,9 @@ const Index = () => {
         renderError={() => (
           <View style={styles.loadingContainer}>
             <Text style={styles.loadingText}>Error loading page, please try again.</Text>
+            <TouchableOpacity style={styles.reloadButton} onPress={handleReload}>
+              <Text style={styles.reloadButtonText}>Reload</Text>
+            </TouchableOpacity>
           </View>
         )}
         renderLoading={() => (
@@ -133,6 +149,19 @@ const styles = StyleSheet.create({
   loadingIndicator: {
     width: 50,
     height: 50,
+  },
+  reloadButton: {
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+  },
+  reloadButtonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 
