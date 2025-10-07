@@ -75,9 +75,15 @@ const Index = () => {
         userAgent={getUserAgent()}
         onError={(error) => {
           console.log('❌ WebView error:', error);
+          console.log('Error details:', JSON.stringify(error, null, 2));
         }}
         onHttpError={(error) => {
           console.log('❌ HTTP error:', error);
+          console.log('HTTP error details:', JSON.stringify(error, null, 2));
+        }}
+        onShouldStartLoadWithRequest={(request) => {
+          console.log('🔗 WebView request:', request.url);
+          return true;
         }}
         onLoadStart={() => {
           console.log('🔄 WebView loading started');

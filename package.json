@@ -1,7 +1,7 @@
 {
   "name": "water-level-iot",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "expo": "~54.0.12",
+    "expo-build-properties": "~1.0.9",
     "expo-constants": "~18.0.9",
     "expo-device": "~8.0.9",
     "expo-linking": "~8.0.8",

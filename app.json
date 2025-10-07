@@ -2,7 +2,7 @@
   "expo": {
     "name": "IoT Apps",
     "slug": "ssmsiotapps",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "ssmsiotapps",
@@ -35,6 +35,14 @@
           "backgroundColor": "#0D8AF1",
           "dark": {
             "backgroundColor": "#0D8AF1"
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
           }
         }
       ]
