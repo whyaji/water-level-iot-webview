@@ -2,8 +2,8 @@
   "expo": {
     "name": "IoT Apps",
     "slug": "ssmsiotapps",
-    "version": "1.0.2",
-    "orientation": "portrait",
+    "version": "1.0.3",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "ssmsiotapps",
     "userInterfaceStyle": "automatic",
